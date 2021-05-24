@@ -1,0 +1,64 @@
+GET http://localhost:5000/posts
+Authorization: Bearer
+(this is where the access token goes)
+"a547bc44db2504c88c99de3e407ea065
+b0b155e50b2ac161be7bd5330e040703
+c17ca040a0bd04141fcc6b54c5b90ec9
+3ba7b099c883c063583586ee68d611aa"
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "Kyle"
+}
+
+###
+ 
+ POST http://localhost:5000/token
+ Content-Type: application/json
+
+{
+    "token": "(this is where the refresh token goes"
+    "eea876537ab740e73b1c28b478c08dabb3695ed7b4409cb4
+    895a99b386b2f9315db2dcbe00301341125349cc3a256c633
+    1c18f628c4e95f07be8f349a6282a89"
+}
+
+###
+
+DELETE http://localhost:5000/logout
+Content-Type: application/json
+
+{
+    "token": "(this is where the refresh token goes"
+    "eea876537ab740e73b1c28b478c08dabb3695ed7b4409cb4
+    895a99b386b2f9315db2dcbe00301341125349cc3a256c633
+    1c18f628c4e95f07be8f349a6282a89"
+}
+
+### AUTH ###
+
+GET http://localhost:5000/users
+
+###
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Shyla",
+    "password": "stuff"
+}
+
+###
+
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "name": "Shyla",
+    "password": "stuff"
+}
